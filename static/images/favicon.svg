@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">FLAVOR cube</title>
+  <g stroke="#1e548a" stroke-width="3" stroke-linejoin="round">
+    <path d="M32 6 55 19 32 32 9 19Z" fill="#dcecfb"/>
+    <path d="M9 19 32 32V58L9 45Z" fill="#8bbce8"/>
+    <path d="M32 32 55 19V45L32 58Z" fill="#286ab0"/>
+  </g>
+</svg>

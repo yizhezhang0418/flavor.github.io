@@ -1,0 +1,3 @@
+# Keep browser-ready videos; ignore original and temporary MP4 files.
+/static/videos/**/*.mp4
+!/static/videos/**/*-web.mp4

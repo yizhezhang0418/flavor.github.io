@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FLAVOR: a hierarchical spatio-temporal map representation for large-scale 3D autonomous UAV exploration with a fixed-size local map and compact mission context.">
+  <meta name="keywords" content="FLAVOR, Beyond Memory Limits, UAV, autonomous exploration, robot-centric mapping, topological planning">
+  <meta name="theme-color" content="#286ab0">
+  <title>Beyond Memory Limits | FLAVOR</title>
+  <link rel="icon" href="./static/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script defer src="./static/js/index.js"></script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-home" href="https://yizhezhang0418.github.io/">
+        <i class="fas fa-home" aria-hidden="true"></i>
+        <span>Home</span>
+      </a>
+      <details class="research-menu">
+        <summary>More Research <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+        <div class="research-links">
+          <a href="https://kafeiyin00.github.io/FU-MPC/">FU-MPC</a>
+          <a href="https://yizhezhang0418.github.io/aware.github.io/">AWARE</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <p class="project-name">FLAVOR <span>Autonomous UAV Exploration</span></p>
+      <h1>Beyond Memory Limits:<br><span>A Hierarchical Spatio-Temporal Map Representation<br class="desktop-break"> for Large-Scale 3D Autonomous Exploration</span></h1>
+      <div class="publication-authors">
+        <span><a href="https://yizhezhang0418.github.io/">Yizhe Zhang</a><sup>1</sup>,</span>
+        <span><a href="https://scholar.google.com/citations?user=sewmV-oAAAAJ&amp;hl=zh-CN&amp;oi=ao">Jianping Li</a><sup>2,*</sup>,</span>
+        <span>Yilun Gao<sup>3</sup>,</span>
+        <span>Liangliang Yin<sup>1</sup>,</span>
+        <span>Pengfei Wan<sup>2</sup>,</span>
+        <span><a href="https://dongzhenwhu.github.io/index.html">Zhen Dong</a><sup>1</sup>,</span>
+        <span><a href="https://3s.whu.edu.cn/ybs/index.htm">Bisheng Yang</a><sup>1</sup></span>
+      </div>
+      <div class="affiliations">
+        <p><sup>1</sup> State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing,<br class="desktop-break"> Wuhan University, Wuhan 430079, China</p>
+        <p><sup>2</sup> School of Electrical and Electronic Engineering, Nanyang Technological University, 639798, Singapore</p>
+        <p><sup>3</sup> Electronic Information School, Wuhan University, Wuhan 430072, China</p>
+        <p class="corresponding"><sup>*</sup> Corresponding author</p>
+      </div>
+      <!-- Paper and code URLs remain unset. The video icon links to the local main demo. -->
+      <div class="publication-links" role="group" aria-label="Project resources">
+        <button class="resource-icon" type="button" disabled aria-label="Paper / arXiv — coming soon" title="Paper / arXiv — coming soon">
+          <i class="fas fa-file-pdf" aria-hidden="true"></i>
+        </button>
+        <a class="resource-icon" href="#demo" aria-label="Watch the project demo" title="Watch the project demo">
+          <i class="fab fa-youtube" aria-hidden="true"></i>
+        </a>
+        <button class="resource-icon" type="button" disabled aria-label="Code — coming soon" title="Code — coming soon">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </button>
+      </div>
+      <!-- <p class="resource-note">Watch the project demo below · Paper &amp; code coming soon</p> -->
+      <p class="hero-summary">Explore beyond the local map.<br><span>Bounded local geometry. Persistent mission context.</span></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section-panel main-demo" id="demo" aria-labelledby="demo-heading">
+      <p class="eyebrow">Project Overview</p>
+      <h2 id="demo-heading">Project Demo</h2>
+      <div class="video-card">
+        <div class="experiment-media">
+          <video controls playsinline preload="metadata" poster="./static/images/main-demo-poster.jpg?v=746643a28376" aria-label="FLAVOR main project demo">
+            <source src="./static/videos/AAdemo-web.mp4?v=746643a28376" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <figure class="teaser">
+      <img src="./static/images/framework.png" width="3821" height="1515" loading="lazy" alt="FLAVOR couples a fixed-size local map with historical visibility, persistent frontier tasks, and sparse topology to plan an exploration tour and executable trajectory.">
+      <figcaption><strong>Local geometry meets mission-scale memory.</strong> FLAVOR preserves observation evidence, unfinished tasks, and return routes while keeping dense geometry within a robot-centric map.</figcaption>
+    </figure>
+
+    <section class="section-panel" aria-labelledby="abstract-heading">
+      <p class="eyebrow">Research overview</p>
+      <h2 id="abstract-heading">Abstract</h2>
+      <div class="abstract-text">
+        <p>Autonomous UAV exploration supports large-scale surveying and inspection under strict onboard memory and computation constraints. Retaining globally queryable geometry makes memory and query costs grow with the mapped workspace. A robot-centric local map bounds this geometric state, but its finite window discards the observation and task context needed for environment-wide exploration.</p>
+        <p>We present <strong>FLAVOR</strong>, a hierarchical spatio-temporal framework that confines dense metric geometry to a local map while retaining compact visibility evidence, unfinished frontier tasks, odometry anchors, and topological routes. A cascaded frontier mechanism preserves unresolved objectives as the map moves. When the UAV returns to a task region, current observations reconstruct its frontier and viewpoint, and the recovered route is checked and repaired before trajectory generation.</p>
+        <p>Experiments in large-scale simulated environments and two real-world deployments demonstrate efficient exploration beyond the local-map extent with substantially reduced map-representation memory. Dense-map capacity remains independent of explored range; exploration-dependent growth is confined to compact observation, task, and route context.</p>
+      </div>
+    </section>
+
+    <section class="section-panel" aria-labelledby="method-heading">
+      <p class="eyebrow">The FLAVOR framework</p>
+      <h2 id="method-heading">Remember where. Reobserve how.</h2>
+      <p class="section-intro">Retained mission context guides where exploration resumes. Current local geometry determines how each task is executed.</p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01 / REPRESENTATION</span>
+          <h3>Bounded local geometry</h3>
+          <p>A fixed-size robot-centric map supports occupancy queries, frontier validation, collision checking, and trajectory generation.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">02 / TASK MEMORY</span>
+          <h3>Persistent frontier tasks</h3>
+          <p>LiDAR-keyframe visibility and cascaded frontier updates preserve observation evidence and unfinished objectives across map shifts.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">03 / RETURN PLANNING</span>
+          <h3>Anchor-associated planning</h3>
+          <p>Sparse topological routes guide the UAV back to pending tasks, which are reconstructed and validated using current observations.</p>
+        </article>
+      </div>
+      <figure class="paper-figure">
+        <img src="./static/images/method-overview.png" width="4078" height="2131" loading="lazy" alt="FLAVOR workflow: local mapping, keyframe visibility, frontier updates and a spatio-temporal graph feed global task planning, local route validation, safe corridor construction and trajectory optimization.">
+        <figcaption>The closed-loop pipeline links hierarchical mapping and task planning to route validation, safe corridor construction, and trajectory optimization.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section-panel" id="simulation" aria-labelledby="simulation-heading">
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow">In simulation</p>
+          <h2 id="simulation-heading">Simulation Experiments</h2>
+        </div>
+      </div>
+      <p class="section-intro">Evaluation in large-scale point-cloud environments with MARSIM as the closed-loop LiDAR and vehicle-simulation backend. All planners use a maximum planning speed of 4.0 m/s.</p>
+      <div class="video-grid simulation-grid">
+        <article class="video-card simulation-card">
+          <div class="experiment-media">
+            <video controls playsinline preload="none" poster="./static/videos/simulation/cave/9月29日(1)-封面.jpg" aria-label="FLAVOR Cave simulation">
+              <source src="./static/videos/simulation/cave/cave-web.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-caption">
+            <div class="card-heading"><h3>Cave</h3><span class="scene-index">SIM 01</span></div>
+            <p class="scene-dimensions">224 × 330 × 41 m</p>
+            <p>Interconnected tunnels, narrow passages, and vertical drops in the DARPA SubT Cave World scene.</p>
+          </div>
+        </article>
+        <article class="video-card simulation-card">
+          <div class="experiment-media">
+            <video controls playsinline preload="none" poster="./static/videos/simulation/forest/9月29日 (1)-封面.jpg" aria-label="FLAVOR Forest simulation">
+              <source src="./static/videos/simulation/forest/forest-web.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-caption">
+            <div class="card-heading"><h3>Forest</h3><span class="scene-index">SIM 02</span></div>
+            <p class="scene-dimensions">108 × 88 × 5 m</p>
+            <p>A vegetation-rich forest reconstructed from terrestrial laser scans collected in Guangxi, China.</p>
+          </div>
+        </article>
+        <article class="video-card simulation-card">
+          <div class="experiment-media">
+            <video controls playsinline preload="none" poster="./static/videos/simulation/lava_tube/9月29日 (2)-封面.jpg" aria-label="FLAVOR Lava Tube simulation">
+              <source src="./static/videos/simulation/lava_tube/lava-tube-web.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-caption">
+            <div class="card-heading"><h3>Lava Tube</h3><span class="scene-index">SIM 03</span></div>
+            <p class="scene-dimensions">313 × 62 × 25 m</p>
+            <p>A long, confined passage with irregular geometry in a lava-tube scene in Hainan, China.</p>
+          </div>
+        </article>
+      </div>
+      <div class="results-block">
+        <h3>Exploration beyond the memory window</h3>
+        <p>Across the three benchmark scenes, FLAVOR completes exploration with <strong>31.98–41.88% less time</strong> and <strong>94–99% less map-representation memory</strong> than EPIC.</p>
+        <div class="table-scroll" role="region" aria-label="Simulation results" tabindex="0">
+          <table>
+            <caption>FLAVOR results in the three simulated scenes. Reductions are relative to EPIC.</caption>
+            <thead><tr><th scope="col">Scene</th><th scope="col">Completion time</th><th scope="col">Time reduction</th><th scope="col">Map memory</th><th scope="col">Memory reduction</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Cave</th><td>845.20 s</td><td>31.98%</td><td>41.93 MB</td><td>97.22%</td></tr>
+              <tr><th scope="row">Forest</th><td>276.87 s</td><td>41.88%</td><td>13.48 MB</td><td>99.00%</td></tr>
+              <tr><th scope="row">Lava Tube</th><td>152.30 s</td><td>41.26%</td><td>14.56 MB</td><td>94.00%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel" id="real-world" aria-labelledby="real-world-heading">
+      <p class="eyebrow">Onboard autonomy</p>
+      <h2 id="real-world-heading">Real-world Experiments</h2>
+      <p class="section-intro">The complete exploration pipeline runs onboard an Intel N305 computer with a Livox MID360 LiDAR. Both deployments extend beyond the local-map width, with a maximum flight speed of 1.2 m/s.</p>
+      <div class="video-grid real-world-grid">
+        <article class="video-card">
+          <div class="experiment-media">
+            <video controls playsinline preload="none" poster="./static/images/forest-poster.jpg" aria-label="FLAVOR autonomous exploration in a real-world forest">
+              <source src="./static/videos/realworld/forest-web.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-caption">
+            <div class="card-heading"><h3>Forest</h3><span class="scene-index">FIELD 01</span></div>
+            <p class="scene-dimensions">60 × 27 × 3 m exploration region</p>
+            <p>Autonomous exploration through unstructured vegetation, using retained visibility evidence and frontier tasks to maintain exploration continuity.</p>
+          </div>
+        </article>
+        <article class="video-card">
+          <div class="experiment-media">
+            <video controls playsinline preload="none" poster="./static/images/construction-poster.jpg" aria-label="FLAVOR autonomous exploration in a complex construction site">
+              <source src="./static/videos/realworld/complex_construction_site-web.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-caption">
+            <div class="card-heading"><h3>Complex Construction Site</h3><span class="scene-index">FIELD 02</span></div>
+            <p class="scene-dimensions">50 × 27 × 3.5 m exploration region</p>
+            <p>Exploration amid structural clutter and transient dust returns, with occupancy and collision queries confined to the sliding local map.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-panel" id="acknowledgements" aria-labelledby="acknowledgements-heading">
+      <h2 id="acknowledgements-heading">Acknowledgements</h2>
+      <p class="acknowledgements-text">We thank the developers of <a href="https://github.com/hku-mars/MARSIM"><strong>MARSIM</strong></a> for the UAV simulation platform, <a href="https://github.com/hku-mars/ROG-Map"><strong>ROG-Map</strong></a> for its efficient robot-centric map representation, and <a href="https://github.com/Robotics-STAR-Lab/EPIC"><strong>EPIC</strong></a> for making their exploration framework openly available. We gratefully acknowledge their contributions to the open-source robotics community.</p>
+    </section>
+
+    <section class="section-panel" id="BibTeX" aria-labelledby="bibtex-heading">
+      <h2 id="bibtex-heading">BibTeX</h2>
+      <!-- Replace this placeholder with the final publication's BibTeX entry. -->
+      <pre class="bibtex-entry" tabindex="0" aria-label="BibTeX citation placeholder"><code>% Citation details to be added.
+@article{citation_key,
+  author  = {},
+  title   = {},
+  journal = {},
+  year    = {},
+  doi     = {}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-name">FLAVOR <span>Beyond Memory Limits</span></p>
+    <p>Template adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://yizhezhang0418.github.io/armor.github.io/">ARMOR</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a></p>
+  </footer>
+</body>
+</html>
