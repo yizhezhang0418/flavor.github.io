@@ -11,7 +11,7 @@ if (researchMenu) {
   });
 }
 
-// All demos use native video controls; play only one at a time.
+// Play only one local experiment video at a time.
 const players = [...document.querySelectorAll('video')];
 players.forEach((player) => {
   player.addEventListener('play', () => {
