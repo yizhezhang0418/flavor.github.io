@@ -10,7 +10,7 @@
 
 ## 视频
 
-- 主 demo：使用 YouTube 内嵌地址 `https://www.youtube.com/embed/E2ZWvrSuQmI`，放在标题、作者信息之后，论文总览图之前。原有 `AAdemo.mp4`、`AAdemo-web.mp4` 作为本地备份保留，页面不再加载它们。
+- 主 demo：使用 YouTube 内嵌地址 `https://www.youtube.com/embed/f4DFurk1gYc`，放在标题、作者信息之后，论文总览图之前。原有 `AAdemo.mp4`、`AAdemo-web.mp4` 作为本地备份保留，页面不再加载它们。
 - 仿真：Cave、Forest、Lava Tube，分别使用 `static/videos/simulation/` 下三个场景目录中的 `cave-web.mp4`、`forest-web.mp4`、`lava-tube-web.mp4` 和已有 JPG 封面，不再保留空的视频位。
 - 实机：使用 `static/videos/realworld/forest-web.mp4` 和 `static/videos/realworld/complex_construction_site-web.mp4`，封面仍在 `static/images/`。
 - `static/videos/realworld/forest.mp4` 和 `complex_construction_site.mp4` 是原始 HEVC 文件，保持不变；页面使用同目录中的 H.264/AAC 兼容副本。
@@ -20,7 +20,7 @@
 
 更换仿真或实机视频时，修改对应 `<video>` 的 `<source src="…">` 和 `poster` 路径即可。五个本地实验视频使用原生播放器，点击播放时才加载，彼此之间自动暂停；YouTube 播放器独立控制。
 
-视频图标在新标签页打开 YouTube 主 demo。论文和代码入口仍是禁用的图标按钮，没有外部网址；发布后再将对应按钮改为带实际 `href` 的链接，并更新提示文字及 `aria-label`。
+视频图标在新标签页打开 YouTube 主 demo，代码图标在新标签页打开 GitHub 仓库 `https://github.com/yizhezhang0418/FLAVOR`。论文入口仍是禁用的图标按钮；发布后再将其改为带实际 `href` 的链接，并更新提示文字及 `aria-label`。
 
 作者顺序已同步论文：Yizhe Zhang、Jianping Li（通讯作者）、Yilun Gao、Liangliang Yin、Pengfei Wan、Zhen Dong、Bisheng Yang。Liangliang Yin 属于单位 1，Pengfei Wan 属于单位 2。
 
