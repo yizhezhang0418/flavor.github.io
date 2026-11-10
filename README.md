@@ -20,15 +20,15 @@
 
 更换仿真或实机视频时，修改对应 `<video>` 的 `<source src="…">` 和 `poster` 路径即可。五个本地实验视频使用原生播放器，点击播放时才加载，彼此之间自动暂停；YouTube 播放器独立控制。
 
-视频图标在新标签页打开 YouTube 主 demo，代码图标在新标签页打开 GitHub 仓库 `https://github.com/yizhezhang0418/FLAVOR`。论文入口仍是禁用的图标按钮；发布后再将其改为带实际 `href` 的链接，并更新提示文字及 `aria-label`。
+论文图标打开 arXiv 页面 `https://arxiv.org/abs/2611.11489`，视频图标打开 YouTube 主 demo，代码图标打开 GitHub 仓库 `https://github.com/yizhezhang0418/FLAVOR`；三个入口均在新标签页打开。
 
-作者顺序已同步论文：Yizhe Zhang、Jianping Li（通讯作者）、Yilun Gao、Liangliang Yin、Pengfei Wan、Zhen Dong、Bisheng Yang。Liangliang Yin 属于单位 1，Pengfei Wan 属于单位 2。
+作者顺序已同步 arXiv 论文：Yizhe Zhang、Jianping Li（通讯作者）、Yilun Gao、Liangliang Yin、Pengfei Wan、Bisheng Yang。Liangliang Yin 属于单位 1，Pengfei Wan 属于单位 2。
 
 ## 导航、致谢与引用
 
 - 顶部 Home 指向 Yizhe Zhang 的个人主页；More Research 包含 FU-MPC 和 AWARE。
 - Acknowledgements 致谢 MARSIM 仿真平台、ROG-Map 地图表示及 EPIC 的开源工作。
-- 页面末尾的 `#BibTeX` 为待填写的引用模板；直接替换 `index.html` 中 `.bibtex-entry` 内的内容即可。
+- 页面末尾的 `#BibTeX` 已填写 arXiv 预印本引用，包含六位作者、年份 2026、编号 `2611.11489` 和论文链接；正式发表后可更新 `index.html` 中 `.bibtex-entry` 的内容。
 
 ## 页面素材
 
